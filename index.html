@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Golden</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        var touch = $('#touch-menu');
+        var menu = $('.menu');
+
+        $(touch).on('click', function(e) {
+          e.preventDefault();
+          menu.slideToggle();
+        });
+        $(window).resize(function(){
+          var wid = $(window).width();
+          if(wid > 740 && menu.is(':hidden')) {
+            menu.removeAttr('style');
+          }
+        });
+      });
+      causeRepaintsOn = $("h1");
+
+      $(window).resize(function() {
+        causeRepaintsOn.css("z-index", 1);
+      });
+    </script>
+</head>
+<body>
+<header>
+    <div class="container">
+        <img src="img/logo.png" alt="Golden" class="logo">
+        <div class="heading clearfix">
+            <a href="#" id="touch-menu">MENU</a>
+            <nav>
+                <ul class="menu">
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#services">Services</a>
+                    </li>
+                    <li>
+                        <a href="#portfolio">Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact us</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="titles">
+            <div class="titles__first">
+                Welcome to our studio!
+            </div>
+            <h1>It's nice to meet you</h1>
+        </div>
+        <a class="button" href="#">Tell me more</a>
+    </div>
+</header>
+<section id="services">
+    <div class="container">
+        <div class="title">
+            <h2>
+                Services
+            </h2>
+            <p>
+                Prom iaculis purus consequat sem cure.
+            </p>
+        </div>
+        <div class="services clearfix">
+            <div class="services__item">
+                <img src="img/icon1.png" alt="Услуга">
+                <h3>E-Commerce</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur
+                    adipisicing elit. Alias, aspernatur at aut
+                    doloribus error eveniet.
+                </p>
+            </div>
+            <div class="services__item">
+                <img src="img/icon2.png" alt="Услуга">
+                <h3>Responsive Web</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur
+                    adipisicing elit. Alias, aspernatur at aut
+                    doloribus error eveniet.
+                </p>
+            </div>
+            <div class="services__item">
+                <img src="img/icon3.png" alt="Услуга">
+                <h3>Web Security</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur
+                    adipisicing elit. Alias, aspernatur at aut
+                    doloribus error eveniet.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="portfolio">
+    <div class="container">
+        <div class="title">
+            <h2>
+                Our portfolio
+            </h2>
+            <p>
+                Prom iaculis purus consequat sem cure.
+            </p>
+            <div class="works clearfix">
+                <img src="img/img1.png" alt="Работа">
+                <img src="img/img2.png" alt="Работа">
+                <img src="img/img3.png" alt="Работа">
+            </div>
+    </div>
+</section>
+
+
+
+
+
+<section id="contact">
+    <div class="container">
+        <div class="title">
+            <h2>
+                Contact us
+            </h2>
+            <p>
+                Prom iaculis purus consequat sem cure.
+            </p>
+        </div>
+        <div class="form clearfix">
+            <div class="form-left clearfix">
+                <input type="text" class="left" placeholder="YOUR NAME *"><br>
+                <input type="text" class="left" placeholder="YOUR E-MAIL *"><br>
+                <input type="text" class="left" placeholder="SUBJECT *">
+            </div>
+            <div class="form-right clearfix">
+                <textarea class="right" placeholder="YOUR MESSAGE *"></textarea>
+            </div>
+        </div>
+        <a class="button-2" href="#">
+            Send message
+        </a>
+    </div>
+</section>
+</body>
+</html>
